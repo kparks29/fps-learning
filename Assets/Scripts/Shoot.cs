@@ -29,8 +29,6 @@ namespace FPSLearning
 			{
 				nextFire = Time.time + rate;
 
-				Debug.DrawRay (transform.position, transform.forward, Color.green, range);
-
 				if (Physics.Raycast (transform.position, transform.forward, out hit, range))
 				{
 					if (hit.transform.CompareTag ("Enemy"))
