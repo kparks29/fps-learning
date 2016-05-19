@@ -26,7 +26,7 @@ namespace FPSLearning {
 		}
 
 		void SpawnGrenade () {
-			GameObject grenade = (GameObject) Instantiate (grenadePrefab, myTransform.TransformPoint (0, 0, 0.5f), myTransform.rotation);
+			GameObject grenade = (GameObject) Instantiate (grenadePrefab, myTransform.TransformPoint (0, 0, 0.7f), myTransform.rotation);
 			grenade.GetComponent<Rigidbody> ().AddForce (myTransform.forward * propulsionForce, ForceMode.Impulse);
 			Destroy (grenade, 10);
 		}
