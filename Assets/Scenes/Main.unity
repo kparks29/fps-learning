@@ -173,6 +173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grenadePrefab: {fileID: 176482, guid: b03609ccdae96403e89ef9db186c62d7, type: 2}
+  propulsionForce: 200
 --- !u!1 &549405387
 GameObject:
   m_ObjectHideFlags: 0
