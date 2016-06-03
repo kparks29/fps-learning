@@ -104,6 +104,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blastRadius: 10
+  explosionPower: 100
+  explosionLayers:
+    serializedVersion: 2
+    m_Bits: 4294965247
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
