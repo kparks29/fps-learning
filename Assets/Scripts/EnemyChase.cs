@@ -30,7 +30,7 @@ namespace FPSLearning {
 
 		void CheckIfPlayerInRange () {
 			if (Time.time > nextCheck && myNavMeshAgent.enabled == true) {
-				nextCheck = Time.time + nextCheck;
+				nextCheck = Time.time + checkRate;
 				hitColliders = Physics.OverlapSphere (myTransform.position, detectionRadius, detectionLayer);
 				if (hitColliders.Length > 0) {
 					myNavMeshAgent.SetDestination (hitColliders [0].transform.position);
