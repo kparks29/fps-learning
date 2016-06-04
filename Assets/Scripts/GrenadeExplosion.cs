@@ -19,6 +19,10 @@ namespace FPSLearning {
 
 			foreach (Collider hitCollider in hitColliders) {
 				//Debug.Log (hitCollider.gameObject.name);
+				if (hitCollider.GetComponent<NavMeshAgent> () != null) {
+					hitCollider.GetComponent<NavMeshAgent> ().enabled = false;
+				}
+
 				if (hitCollider.GetComponent<Rigidbody> () != null) {
 					hitCollider.GetComponent<Rigidbody> ().isKinematic = false;
 					hitCollider.GetComponent<Rigidbody> ().AddExplosionForce (explosionPower, explosionPoint, blastRadius, 1, ForceMode.Impulse);
