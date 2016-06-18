@@ -1,17 +1,22 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-namespace FPSLearning {
+namespace Chapter1 {
 	public class Spawner : MonoBehaviour {
 
 		public int numberOfEnemies;
 		public GameObject objectToSpawn;
 		private float spawnRadius = 5;
 		private Vector3 spawnPosition;
+		private GameManager_EventMaster eventMasterScript;
 
-		// Use this for initialization
-		void Start () {
-			SpawnObject ();
+		void OnEnable () {
+			SetInitialReferences ();
+			eventMasterScript.myGeneralEvent += SpawnObject;
+		}
+
+		void OnDisable () {
+			eventMasterScript.myGeneralEvent -= SpawnObject;
 		}
 
 		void SpawnObject () {
@@ -19,6 +24,10 @@ namespace FPSLearning {
 				spawnPosition = transform.position + Random.insideUnitSphere * spawnRadius;
 				Instantiate (objectToSpawn, spawnPosition, Quaternion.identity);
 			}
+		}
+
+		void SetInitialReferences () {
+			eventMasterScript = GameObject.Find ("GameManager").GetComponent<GameManager_EventMaster> ();
 		}
 	}
 }

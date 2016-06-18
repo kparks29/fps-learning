@@ -2,7 +2,7 @@
 using System.Collections;
 
 
-namespace FPSLearning {
+namespace Chapter1 {
 	public class GameManager_CursorToggle : MonoBehaviour {
 
 		private bool isCursorLocked;

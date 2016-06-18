@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-namespace FPSLearning {
+namespace Chapter1 {
 	public class GrenadeExplosion : MonoBehaviour {
 
 		private Collider[] hitColliders;
