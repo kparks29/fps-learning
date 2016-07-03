@@ -22,13 +22,22 @@ public class EventManager : MonoBehaviour {
 			lighting.color = darkColor;
 
 			// play audio
-			audioSource.time = 11f;
 			audioSource.clip =  audioClip;
+			audioSource.time = 11f;
 			audioSource.Play ();
 		}
 	}
 
-	void Start () {
+	public void RemoveObject (GameObject obj, float delay) {
+		StartCoroutine (RemoveObjectDelay (obj, delay));
+	}
+
+	IEnumerator RemoveObjectDelay (GameObject obj, float delay) {
+		yield return new WaitForSeconds(delay);
+		Destroy (obj);
+	}
+
+	void Awake () {
 		audioSource = GameObject.Find ("FPSController").GetComponent<AudioSource> ();
 		lighting = GameObject.Find ("Directional light").GetComponent<Light> ();
 	}

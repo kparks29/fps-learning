@@ -24,7 +24,7 @@ namespace Chapter1_Assignment {
 		}
 
 		IEnumerator DisableCanvas () {
-			yield return new WaitForSeconds (5);
+			yield return new WaitForSeconds (4);
 			panel.SetActive (false);
 		}
 
