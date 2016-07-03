@@ -34,6 +34,11 @@ public class ExplodeGrenade : MonoBehaviour {
 			Rigidbody hitRigidbody = hit.GetComponent<Rigidbody> ();
 			if (hit.GetComponent<NavMeshAgent> () != null) {
 				hit.GetComponent<NavMeshAgent> ().enabled = false;
+
+				if (hit.GetComponent<EnemyChase> ().hasBeenHit == false) {
+					eventManager.RemoveEnemies (1);
+					hit.GetComponent<EnemyChase> ().hasBeenHit = true;
+				}
 			}
 			if (hitRigidbody != null) {
 				hitRigidbody.isKinematic = false;

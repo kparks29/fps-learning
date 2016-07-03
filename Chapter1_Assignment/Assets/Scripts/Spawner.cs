@@ -24,6 +24,7 @@ public class Spawner : MonoBehaviour {
 			spawnPosition = spawnerTransform.position + Random.insideUnitSphere * spawnRadius;
 			Instantiate (enemy, spawnPosition, Quaternion.identity);
 		}
+		eventManagerScript.AddEnemies (numEnemiesToSpawn);
 	}
 
 	void SetInitialReferences () {

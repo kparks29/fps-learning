@@ -13,10 +13,12 @@ namespace Chapter1_Assignment {
 		void OnEnable () {
 			SetInitialReferences ();
 			eventManagerScript.openTreasureEvent += SetTrickedMessage;
+			eventManagerScript.winEvent += SetWinMessage;
 		}
 
 		void OnDisable () {
 			eventManagerScript.openTreasureEvent -= SetTrickedMessage;
+			eventManagerScript.winEvent += SetWinMessage;
 		}
 
 		void Start () {
@@ -32,6 +34,13 @@ namespace Chapter1_Assignment {
 			panel.SetActive (true);
 			title.text = "Foolish Adventurer!";
 			message.text = "Now you shall suffer...";
+			StartCoroutine (DisableCanvas ());
+		}
+
+		void SetWinMessage () {
+			panel.SetActive (true);
+			title.text = "NOOOO!";
+			message.text = "I have been defeated";
 			StartCoroutine (DisableCanvas ());
 		}
 

@@ -9,6 +9,7 @@ public class EnemyChase : MonoBehaviour {
 	private float nextCheck;
 	private float detectionRadius = 50f;
 	private Collider[] hitColliders;
+	public bool hasBeenHit = false;
 
 	public LayerMask detectionLayer;
 
