@@ -3,9 +3,20 @@ using System.Collections;
 
 public class TreasureTrigger : MonoBehaviour {
 
+	private EventManager eventManagerScript;
+
+	void Start () {
+		SetInitialReferences ();
+	}
+
 	void OnTriggerEnter (Collider collider) {
 		if (collider.gameObject.CompareTag ("Player")) {
-			Debug.Log ("Ran into Chest");
+			gameObject.SetActive (false);
+			eventManagerScript.CallOpenTreasure ();
 		}
+	}
+
+	void SetInitialReferences () {
+		eventManagerScript = GameObject.Find ("GameManager").GetComponent<EventManager> ();
 	}
 }
