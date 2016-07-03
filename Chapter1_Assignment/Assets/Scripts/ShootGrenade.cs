@@ -4,7 +4,7 @@ using System.Collections;
 public class ShootGrenade : MonoBehaviour {
 
 	public GameObject grenadePrefab;
-	public float speed = 5;
+	private float speed = 10;
 	private Transform gunTransform;
 
 	// Use this for initialization
