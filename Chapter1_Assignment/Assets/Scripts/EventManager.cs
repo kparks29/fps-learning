@@ -51,12 +51,10 @@ public class EventManager : MonoBehaviour {
 
 	public void AddEnemies (int count) {
 		enemyCount += count;
-		Debug.Log (enemyCount);
 	}
 
 	public void RemoveEnemies (int count) {
 		enemyCount -= count;
-		Debug.Log (enemyCount);
 		if (enemyCount == 0) {
 			EndOfGame ();
 		}
