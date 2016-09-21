@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-namespace Chapter2 {
+namespace FPS {
 	public class GameManager_GameOver : MonoBehaviour {
 
 		private GameManager_Master gameManagerMaster;

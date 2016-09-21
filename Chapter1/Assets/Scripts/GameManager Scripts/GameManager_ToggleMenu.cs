@@ -2,7 +2,7 @@
 using System.Collections;
 
 
-namespace Chapter2 {
+namespace FPS {
 	public class GameManager_ToggleMenu : MonoBehaviour {
 
 		private GameManager_Master gameManagerMaster;

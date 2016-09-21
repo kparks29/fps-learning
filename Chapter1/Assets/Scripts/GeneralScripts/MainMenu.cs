@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 
-namespace Chapter2 {
+namespace FPS {
 	public class MainMenu : MonoBehaviour {
 
 		public void PlayGame () {

@@ -2,26 +2,26 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 
-namespace Chapter2 {
-	public class GameManager_RestartLevel : MonoBehaviour {
+namespace FPS {
+	public class GameManager_GoToMenuScene : MonoBehaviour {
 
 		private GameManager_Master gameManagerMaster;
 
 		void OnEnable () {
 			SetInitialReferences ();
-			gameManagerMaster.RestartLevelEvent += RestartLevel;
+			gameManagerMaster.GoToMenuSceneEvent += GoToMenuScene;
 		}
 
 		void OnDisable () {
-			gameManagerMaster.RestartLevelEvent -= RestartLevel;
+			gameManagerMaster.GoToMenuSceneEvent -= GoToMenuScene;
 		}
 
 		void SetInitialReferences () {
 			gameManagerMaster = GetComponent<GameManager_Master> ();
 		}
 
-		void RestartLevel () {
-			SceneManager.LoadScene (SceneManager.GetActiveScene ().name);
+		void GoToMenuScene () {
+			SceneManager.LoadScene ("MainMenu");
 		}
 	}
 }

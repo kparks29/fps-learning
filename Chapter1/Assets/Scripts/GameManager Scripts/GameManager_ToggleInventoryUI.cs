@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-namespace Chapter2 {
+namespace FPS {
 	public class GameManager_ToggleInventoryUI : MonoBehaviour {
 
 		[Tooltip("Does this game mode have an inventory. Set to true if that is the case.")]

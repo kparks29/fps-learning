@@ -3,7 +3,7 @@ using System.Collections;
 using UnityStandardAssets.Characters.FirstPerson;
 
 
-namespace Chapter2 {
+namespace FPS {
 	public class GameManager_TogglePlayer : MonoBehaviour {
 
 		public FirstPersonController playerController;
